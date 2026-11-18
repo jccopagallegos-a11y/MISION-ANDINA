@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block title %}Reportes | MISIÓN ANDINA{% endblock %}{% block content %}
+<div class="page-head"><div><div class="eyebrow">ANÁLISIS Y RESULTADOS</div><h1>Reportes de misiones</h1><p>Resumen de las evaluaciones realizadas.</p></div></div>
+<div class="table-wrap"><table><thead><tr><th>MISIÓN</th><th>DESTINO</th><th>PRESUPUESTO</th><th>PUNTAJE</th><th>RESULTADO</th></tr></thead><tbody>{% for m in missions %}<tr><td><b>{{ m.name }}</b><small>{{ m.objective }}</small></td><td>{{ m.destination }}</td><td>${{ '%.1f'|format(m.budget) }}M</td><td>{{ m.score }}/100</td><td><span class="status">{{ m.status }}</span></td></tr>{% else %}<tr><td colspan="5">Todavía no hay reportes. Simula una misión para generar resultados.</td></tr>{% endfor %}</tbody></table></div>
+{% endblock %}
