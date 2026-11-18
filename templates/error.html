@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block title %}Error {{ code }} | MISIÓN ANDINA{% endblock %}{% block content %}<div class="empty"><div class="eyebrow">SEÑAL DEL SISTEMA · {{ code }}</div><h1>{{ code }}</h1><p>{{ message }}</p><a class="btn" href="{{ url_for('dashboard') if session.get('user_id') else url_for('index') }}">Volver</a></div>{% endblock %}
