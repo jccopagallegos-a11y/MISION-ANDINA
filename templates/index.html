@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block title %}MISIÓN ANDINA | Explora más allá{% endblock %}
+{% block content %}
+<section class="hero">
+<div class="hero-copy"><div class="eyebrow">CENTRO DE CONTROL · EXPLORACIÓN ESPACIAL</div>
+<h1>Diseña tu misión.<br><em>Explora lo imposible.</em></h1>
+<p>Planifica una misión espacial, administra recursos y descubre cómo tus decisiones de ingeniería influyen en el éxito de la exploración.</p>
+<div class="actions"><a class="btn" href="{{ url_for('register') }}">Comenzar misión <span>↗</span></a><a class="text-link" href="{{ url_for('login') }}">Ya tengo una cuenta →</a></div>
+<div class="hero-meta"><span>✦ SIMULACIÓN EDUCATIVA</span><span>● FLASK + SQLITE</span></div></div>
+<div class="planet-scene"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"></div><div class="moon"></div><div class="satellite">✧</div><div class="scene-label">DESTINO 01 <b>MARTE</b></div></div>
+</section>
+<section class="feature-row"><div><b>01 / PLANIFICA</b><span>Define objetivos y destino</span></div><div><b>02 / CONFIGURA</b><span>Equilibra recursos y tecnología</span></div><div><b>03 / SIMULA</b><span>Evalúa el resultado de tu misión</span></div></section>
+{% endblock %}
