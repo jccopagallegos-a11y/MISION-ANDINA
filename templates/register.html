@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block title %}Crear cuenta | MISIÓN ANDINA{% endblock %}{% block content %}
+<div class="auth-wrap"><div class="auth-art"><div class="eyebrow">NUEVO EXPLORADOR</div><h1>Tu misión<br>comienza aquí.</h1><p>Crea tu perfil y empieza a diseñar misiones espaciales.</p><div class="mini-orbit">✦</div></div>
+<form class="panel auth-form" method="post"><div class="eyebrow">REGISTRO DE USUARIO</div><h2>Crear cuenta</h2><label>Nombre completo</label><input name="name" required placeholder="Tu nombre"><label>Correo electrónico</label><input type="email" name="email" required placeholder="tu@correo.com"><label>Contraseña (mínimo 6 caracteres)</label><input type="password" name="password" minlength="6" required placeholder="Crea una contraseña"><button class="btn full">Crear mi cuenta →</button><p class="muted">¿Ya tienes cuenta? <a href="{{ url_for('login') }}">Inicia sesión</a></p></form></div>
+{% endblock %}
