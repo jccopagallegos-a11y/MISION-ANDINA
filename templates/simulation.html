@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block title %}Resultado de simulación | MISIÓN ANDINA{% endblock %}{% block content %}
+<div class="page-head"><div><div class="eyebrow">CENTRO DE ANÁLISIS / RESULTADO</div><h1>Evaluación de misión</h1><p>{{ mission.name }} · {{ mission.destination }}</p></div><a class="btn btn-ghost" href="{{ url_for('missions') }}">Volver</a></div>
+<div class="result-layout"><div class="score-panel"><div class="eyebrow">ÍNDICE DE VIABILIDAD DIDÁCTICO</div><div class="score">{{ score }}<small>/100</small></div><span class="result-status">{{ status }}</span><p>Resultado calculado a partir de los recursos configurados.</p></div><div class="panel"><h2>Informe de evaluación</h2>{% for note in notes %}<div class="result-line"><span>✦</span>{{ note }}</div>{% endfor %}<div class="notice">Esta evaluación es un modelo educativo simplificado. No representa un análisis orbital real ni certifica la viabilidad de una misión espacial.</div></div></div>
+{% endblock %}
