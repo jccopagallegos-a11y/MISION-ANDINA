@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block title %}Iniciar sesión | MISIÓN ANDINA{% endblock %}{% block content %}
+<div class="auth-wrap"><div class="auth-art"><div class="eyebrow">ACCESO A LA ESTACIÓN</div><h1>El siguiente<br>horizonte te espera.</h1><p>Ingresa al centro de control para continuar tus misiones.</p><div class="mini-orbit">✦</div></div>
+<form class="panel auth-form" method="post"><div class="eyebrow">BIENVENIDO DE NUEVO</div><h2>Iniciar sesión</h2><label>Correo electrónico</label><input type="email" name="email" required placeholder="tu@correo.com"><label>Contraseña</label><input type="password" name="password" required placeholder="Tu contraseña"><button class="btn full">Ingresar al sistema →</button><p class="muted">¿No tienes cuenta? <a href="{{ url_for('register') }}">Regístrate aquí</a></p></form></div>
+{% endblock %}
